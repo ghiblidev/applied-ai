@@ -212,21 +212,27 @@
 
         <header>
             <div class="title-row">
-                <h1>Multi-Agent Competitive Intelligence Platform for Pharma R&D</h1>
+                <h1>Multi-Agent Competitive Intelligence Platform for Biopharma R&D</h1>
                 <div class="status-badge">ONGOING</div>
             </div>
             <p class="tagline">Dual-Framework Multi-Agent System for Migraine Therapeutics Intelligence</p>
             <div class="tech-tags">
-                <span class="tag">LangGraph</span>
+                <span class="tag">Multi-Agent Systems</span>
+		<span class="tag">LangGraph</span>
                 <span class="tag">CrewAI</span>
+		<span class="tag">Dual Framework</span>
+		<span class="tag">Agent Orchestration</span>
                 <span class="tag">Ollama Llama 3.1</span>
+		<span class="tag">API LLM</span>
                 <span class="tag">FastAPI</span>
                 <span class="tag">PostgreSQL</span>
                 <span class="tag">Redis</span>
-                <span class="tag">Docker</span>
+                <span class="tag">Docker Compose</span>
                 <span class="tag">ClinicalTrials.gov API</span>
                 <span class="tag">PubMed API</span>
                 <span class="tag">USPTO</span>
+		<span class="tag">Python</span>
+		<span class="tag">Competitive Intelligence</span>
             </div>
         </header>
 
@@ -240,91 +246,121 @@
             <p>This project develops an autonomous AI system that monitors the competitive landscape in migraine therapeutics, tracking clinical trials, patent filings, and scientific publications across 15+ competitors developing both pharmaceutical drugs and medical devices. The platform autonomously collects data from ClinicalTrials.gov, PubMed, and USPTO patent databases, synthesizes findings using local LLM reasoning, and generates executive-ready intelligence reports.</p>
 
             <div class="metrics">
+
                 <div class="metric-card">
-                    <div class="metric-value">85%</div>
-                    <div class="metric-label">Reduction in Manual Research Effort</div>
+                    <div class="metric-value">2 </div>
+                    <div class="metric-label">Multi-Agent Frameworks</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-value">15+</div>
-                    <div class="metric-label">Competitors Monitored</div>
+                    <div class="metric-value">12+ </div>
+                    <div class="metric-label">Specialized Tools Built</div>
                 </div>
                 <div class="metric-card">
                     <div class="metric-value">3</div>
                     <div class="metric-label">Data Sources Integrated</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-value">2</div>
-                    <div class="metric-label">Framework Implementations</div>
+                    <div class="metric-value">15+</div>
+                    <div class="metric-label">Competitors Monitored</div>
                 </div>
             </div>
 
-            <h3>What Makes This Different</h3>
-            <p>The system provides more comprehensive and timely competitive insights than manual processes by continuously monitoring multiple data sources, identifying patterns and connections that human analysts might miss, and delivering synthesized intelligence with strategic recommendations. Beyond automation, the platform reduces cognitive load on BD teams, allowing them to focus on strategic decision-making rather than data collection.</p>
+            <h3>What Makes This Relevant</h3>
+            <p>The system provides more comprehensive and timely competitive insights than manual processes by continuously monitoring multiple data sources, identifying patterns and connections that human analysts might miss, and delivering synthesized intelligence with strategic recommendations. Beyond automation, the platform reduces cognitive load on Business Development teams, allowing them to focus on strategic decision-making rather than data collection.</p>
         </section>
 
         <section id="architecture">
             <h2>Technical Architecture</h2>
 
             <div class="architecture-diagram">
-                <svg width="100%" height="400" viewBox="0 0 800 400">
-                    <!-- Data Sources Layer -->
-                    <text x="20" y="30" font-size="14" font-weight="bold" fill="#1a1a1a">Data Sources</text>
-                    <rect x="20" y="50" width="180" height="60" fill="#f0f7ff" stroke="#93c5fd" stroke-width="1"/>
-                    <text x="110" y="75" text-anchor="middle" font-size="12" fill="#2c3e50">ClinicalTrials.gov</text>
-                    <text x="110" y="95" text-anchor="middle" font-size="12" fill="#2c3e50">PubMed | USPTO</text>
+    <svg width="100%" height="600" viewBox="0 0 1000 600">
+        <!-- Data Sources -->
+        <rect x="40" y="80" width="200" height="120" fill="none" stroke="#333" stroke-width="2"/>
+        <text x="140" y="110" text-anchor="middle" font-size="14" font-weight="bold">Data Sources</text>
+        <text x="140" y="135" text-anchor="middle" font-size="12">ClinicalTrials.gov</text>
+        <text x="140" y="155" text-anchor="middle" font-size="12">PubMed</text>
+        <text x="140" y="175" text-anchor="middle" font-size="12">USPTO Patents</text>
 
-                    <!-- Dual Framework Layer -->
-                    <text x="270" y="30" font-size="14" font-weight="bold" fill="#1a1a1a">Multi-Agent Frameworks</text>
-                    
-                    <!-- LangGraph -->
-                    <rect x="240" y="50" width="200" height="100" fill="#fff4ed" stroke="#fb923c" stroke-width="1"/>
-                    <text x="340" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a1a">LangGraph</text>
-                    <text x="340" y="90" text-anchor="middle" font-size="11" fill="#555">State Machines</text>
-                    <text x="340" y="105" text-anchor="middle" font-size="11" fill="#555">Conditional Routing</text>
-                    <text x="340" y="120" text-anchor="middle" font-size="11" fill="#555">Granular Control</text>
-                    <text x="340" y="135" text-anchor="middle" font-size="11" fill="#555">Iterative Refinement</text>
+        <!-- Multi-Agent Frameworks Label -->
+        <text x="500" y="40" text-anchor="middle" font-size="15" font-weight="bold">Multi-Agent Frameworks</text>
 
-                    <!-- CrewAI -->
-                    <rect x="240" y="170" width="200" height="100" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
-                    <text x="340" y="190" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a1a1a">CrewAI</text>
-                    <text x="340" y="210" text-anchor="middle" font-size="11" fill="#555">Hierarchical Agents</text>
-                    <text x="340" y="225" text-anchor="middle" font-size="11" fill="#555">Sequential Tasks</text>
-                    <text x="340" y="240" text-anchor="middle" font-size="11" fill="#555">Fast Development</text>
-                    <text x="340" y="255" text-anchor="middle" font-size="11" fill="#555">Intuitive Coordination</text>
+        <!-- LangGraph -->
+        <rect x="300" y="80" width="240" height="150" fill="none" stroke="#333" stroke-width="2"/>
+        <text x="420" y="110" text-anchor="middle" font-size="14" font-weight="bold">LangGraph</text>
+        <line x1="310" y1="120" x2="530" y2="120" stroke="#ddd" stroke-width="1"/>
+        <text x="420" y="140" text-anchor="middle" font-size="11">State Machines</text>
+        <text x="420" y="158" text-anchor="middle" font-size="11">Conditional Routing</text>
+        <text x="420" y="176" text-anchor="middle" font-size="11">Granular Control</text>
+        <text x="420" y="194" text-anchor="middle" font-size="11">Iterative Refinement</text>
+        <text x="420" y="218" text-anchor="middle" font-size="10" fill="#666" font-style="italic">(12+ specialized tools)</text>
 
-                    <!-- Shared Infrastructure -->
-                    <text x="520" y="30" font-size="14" font-weight="bold" fill="#1a1a1a">Shared Infrastructure</text>
-                    <rect x="500" y="50" width="180" height="80" fill="#fafafa" stroke="#d1d5db" stroke-width="1"/>
-                    <text x="590" y="75" text-anchor="middle" font-size="12" fill="#2c3e50">Docker Compose</text>
-                    <text x="590" y="95" text-anchor="middle" font-size="12" fill="#2c3e50">PostgreSQL | Redis</text>
-                    <text x="590" y="115" text-anchor="middle" font-size="12" fill="#2c3e50">FastAPI</text>
+        <!-- CrewAI -->
+        <rect x="300" y="270" width="240" height="150" fill="none" stroke="#333" stroke-width="2"/>
+        <text x="420" y="300" text-anchor="middle" font-size="14" font-weight="bold">CrewAI</text>
+        <line x1="310" y1="310" x2="530" y2="310" stroke="#ddd" stroke-width="1"/>
+        <text x="420" y="330" text-anchor="middle" font-size="11">Hierarchical Agents</text>
+        <text x="420" y="348" text-anchor="middle" font-size="11">Sequential Tasks</text>
+        <text x="420" y="366" text-anchor="middle" font-size="11">Fast Development</text>
+        <text x="420" y="384" text-anchor="middle" font-size="11">Intuitive Coordination</text>
+        <text x="420" y="408" text-anchor="middle" font-size="10" fill="#666" font-style="italic">(12+ specialized tools)</text>
 
-                    <!-- LLM Layer -->
-                    <rect x="500" y="150" width="180" height="60" fill="#faf5ff" stroke="#c084fc" stroke-width="1"/>
-                    <text x="590" y="175" text-anchor="middle" font-size="12" fill="#2c3e50">Ollama Llama 3.1</text>
-                    <text x="590" y="195" text-anchor="middle" font-size="12" fill="#2c3e50">API LLM</text>
+        <!-- Shared Infrastructure -->
+        <rect x="620" y="80" width="220" height="120" fill="none" stroke="#333" stroke-width="2"/>
+        <text x="730" y="110" text-anchor="middle" font-size="14" font-weight="bold">Shared Infrastructure</text>
+        <line x1="630" y1="120" x2="830" y2="120" stroke="#ddd" stroke-width="1"/>
+        <text x="730" y="142" text-anchor="middle" font-size="12">Docker Compose</text>
+        <text x="730" y="162" text-anchor="middle" font-size="12">PostgreSQL</text>
+        <text x="730" y="182" text-anchor="middle" font-size="12">Redis | FastAPI</text>
 
-                    <!-- Output -->
-                    <text x="520" y="250" font-size="14" font-weight="bold" fill="#1a1a1a">Output</text>
-                    <rect x="500" y="270" width="180" height="60" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1"/>
-                    <text x="590" y="295" text-anchor="middle" font-size="12" fill="#2c3e50">Executive Reports</text>
-                    <text x="590" y="315" text-anchor="middle" font-size="12" fill="#2c3e50">Strategic Insights</text>
+        <!-- LLM Layer -->
+        <rect x="620" y="240" width="220" height="100" fill="none" stroke="#333" stroke-width="2"/>
+        <text x="730" y="270" text-anchor="middle" font-size="14" font-weight="bold">LLM Layer</text>
+        <line x1="630" y1="280" x2="830" y2="280" stroke="#ddd" stroke-width="1"/>
+        <text x="730" y="305" text-anchor="middle" font-size="12">Ollama Llama 3.1</text>
+        <text x="730" y="325" text-anchor="middle" font-size="12">API LLM</text>
 
-                    <!-- Arrows -->
-                    <path d="M 200 80 L 240 100" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                    <path d="M 200 80 L 240 220" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                    <path d="M 440 100 L 500 90" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                    <path d="M 440 220 L 500 90" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                    <path d="M 590 130 L 590 150" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
-                    <path d="M 590 210 L 590 270" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+        <!-- Output -->
+        <rect x="320" y="480" width="280" height="90" fill="none" stroke="#333" stroke-width="2"/>
+        <text x="460" y="510" text-anchor="middle" font-size="14" font-weight="bold">Output</text>
+        <line x1="330" y1="520" x2="590" y2="520" stroke="#ddd" stroke-width="1"/>
+        <text x="460" y="543" text-anchor="middle" font-size="12">Executive Intelligence Reports</text>
+        <text x="460" y="560" text-anchor="middle" font-size="12">Strategic Recommendations</text>
 
-                    <defs>
-                        <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-                            <polygon points="0 0, 10 3, 0 6" fill="#666"/>
-                        </marker>
-                    </defs>
-                </svg>
-            </div>
+        <!-- Arrows -->
+        <!-- Data Sources to LangGraph -->
+        <path d="M 240 120 L 300 130" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+        
+        <!-- Data Sources to CrewAI -->
+        <path d="M 240 160 L 300 320" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+        
+        <!-- LangGraph to Shared Infrastructure -->
+        <path d="M 540 130 L 620 130" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+        
+        <!-- CrewAI to Shared Infrastructure -->
+        <path d="M 540 320 L 580 320 L 580 160 L 620 150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+        
+        <!-- Shared Infrastructure to LLM Layer -->
+        <path d="M 730 200 L 730 240" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+        
+        <!-- LangGraph to CrewAI (dotted - comparison) -->
+        <path d="M 420 230 L 420 270" stroke="#999" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead-light)"/>
+        
+        <!-- LangGraph/CrewAI to Output -->
+        <path d="M 420 420 L 420 480" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+        
+        <!-- LLM Layer to Output -->
+        <path d="M 680 340 L 600 480" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#666"/>
+            </marker>
+            <marker id="arrowhead-light" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="#999"/>
+            </marker>
+        </defs>
+    </svg>
+</div>
 
             <h3>Technology Stack</h3>
             <ul>
