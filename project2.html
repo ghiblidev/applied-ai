@@ -190,18 +190,25 @@
             <h1>AI-Augmented Target Ideation for Neurological Drug Discovery</h1>
             <p class="tagline">Agentic RAG System for Biomedical Knowledge Graph Interrogation</p>
             <div class="tech-tags">
-                <span class="tag">Neo4j</span>
-                <span class="tag">Knowledge Graphs</span>
+                <span class="tag">Agentic AI</span>
                 <span class="tag">LangGraph</span>
+		<span class="tag">Neo4j</span>
+                <span class="tag">Knowledge Graphs</span>
+		<span class="tag">RAG</span>
+		<span class="tag">Vector Search</span>
+		<span class="tag">Embeddings</span>
+		<span class="tag">Semantic Search</span>
+		<span class="tag">Text-to-Cypher</span>
+		<span class="tag">LLM-as-Judge</span>
                 <span class="tag">GPT-4</span>
-                <span class="tag">Mistral Large</span>
+                <span class="tag">Llama 3.1-8B</span>
+		<span class="tag">BioLinkBERT</span>
+		<span class="tag">Snowflake-Arctic</span>
                 <span class="tag">Hetionet</span>
                 <span class="tag">Qiagen</span>
-                <span class="tag">Embeddings</span>
                 <span class="tag">Dataiku</span>
-                <span class="tag">OpenAI API</span>
-                <span class="tag">RAG</span>
-                <span class="tag">Cypher</span>
+                <span class="tag">Python</span>
+                
             </div>
         </header>
 
@@ -211,7 +218,7 @@
             <h3>The Challenge</h3>
             <p>Biomedical researchers working on target ideation and drug discovery face fundamental barriers when attempting to query complex datasets. Fragmented data schemas, specialized query languages like Cypher, and limited semantic interoperability create a technical moat that prevents domain experts from efficiently extracting insights. Research teams—particularly those without dedicated bioinformatics support—spend significant time learning database structures and crafting queries rather than focusing on scientific hypothesis generation.</p>
 
-            <p>The challenge becomes even more acute when working with multiple interconnected datasets. Hetionet, a comprehensive biomedical knowledge graph, contains millions of relationships across 47 node types representing genes, diseases, compounds, pathways, and more. Qiagen's IPA database adds nearly 400,000 curated findings from neuropsychiatric and neurodegenerative research. Researchers need to traverse these knowledge graphs to identify novel therapeutic targets, understand disease mechanisms, and discover drug repurposing opportunities—but doing so requires both technical expertise and a priori knowledge of data structures.</p>
+            <p>The challenge becomes even more acute when working with multiple interconnected datasets. Hetionet, a comprehensive biomedical knowledge graph, contains millions of relationships across 47 node types representing genes, diseases, compounds, pathways, and more. Qiagen's database adds nearly 400,000 curated findings from neuropsychiatric and neurodegenerative research. Researchers need to traverse these knowledge graphs to identify novel therapeutic targets, understand disease mechanisms, and discover drug repurposing opportunities—but doing so requires both technical expertise and a priori knowledge of data structures.</p>
 
             <h3>The Solution</h3>
             <p>We developed an AI-augmented target ideation chatbot that enables natural language access to interconnected biomedical knowledge graphs. The system implements an agentic RAG framework with 20+ modular retrieval tools, allowing researchers to ask complex questions without deep technical expertise. By orchestrating multiple specialized agents through LangGraph, the platform intelligently selects appropriate retrieval strategies, expands searches when initial results are insufficient, and synthesizes findings from both Hetionet and Qiagen databases.</p>
@@ -232,7 +239,7 @@
             </div>
 
             <h3>Impact</h3>
-            <p>The chatbot democratizes access to complex biomedical data, enabling New Target Team researchers to explore hypotheses interactively without writing Cypher queries or understanding graph schemas. The system supports both simple entity lookups ("What genes are associated with schizophrenia?") and complex multi-hop path reasoning ("Find compounds that target proteins upregulated in Alzheimer's disease and are already FDA-approved for other indications"). This accelerates the target ideation process and allows researchers to iterate on scientific questions in real-time.</p>
+            <p>The chatbot democratizes access to complex biomedical data, enabling New Target Team researchers to explore hypotheses interactively without writing Cypher queries or understanding graph schemas. The system supports both simple entity lookups ("What genes are associated with schizophrenia?") and complex multi-hop path reasoning ("Find compounds that target proteins upregulated in Narcolepsy disease and are already FDA-approved for other indications"). This accelerates the target ideation process and allows researchers to iterate on scientific questions in real-time.</p>
         </section>
 
         <section id="architecture">
@@ -248,7 +255,7 @@
                     <!-- Agent Orchestration -->
                     <rect x="250" y="20" width="300" height="80" fill="none" stroke="#333" stroke-width="2"/>
                     <text x="400" y="45" text-anchor="middle" font-size="13" font-weight="bold">LangGraph Orchestration</text>
-                    <text x="400" y="65" text-anchor="middle" font-size="11">GPT-4 (complex) | Mistral Large (simple)</text>
+                    <text x="400" y="65" text-anchor="middle" font-size="11">GPT-4 (complex tasks) | Llama 3.1-8B (simpler tasks)</text>
                     <text x="400" y="85" text-anchor="middle" font-size="11">Tool selection & RAG expansion</text>
 
                     <!-- 20+ Tools Box -->
@@ -284,7 +291,7 @@
                     <rect x="20" y="200" width="180" height="100" fill="none" stroke="#333" stroke-width="2"/>
                     <text x="110" y="225" text-anchor="middle" font-size="13" font-weight="bold">Knowledge Graphs</text>
                     <text x="110" y="245" text-anchor="middle" font-size="11">Hetionet (Neo4j)</text>
-                    <text x="110" y="260" text-anchor="middle" font-size="11">Qiagen IPA (Neo4j)</text>
+                    <text x="110" y="260" text-anchor="middle" font-size="11">Qiagen (Neo4j)</text>
                     <text x="110" y="280" text-anchor="middle" font-size="10">+ Embedding Layer</text>
 
                     <!-- Backend Platform -->
@@ -296,7 +303,7 @@
                     <!-- Output -->
                     <rect x="600" y="250" width="180" height="60" fill="none" stroke="#333" stroke-width="2"/>
                     <text x="690" y="275" text-anchor="middle" font-size="13" font-weight="bold">Chatbot Interface</text>
-                    <text x="690" y="295" text-anchor="middle" font-size="11">OpenAI Frontend</text>
+                    <text x="690" y="295" text-anchor="middle" font-size="11">OpenAPI Frontend</text>
 
                     <!-- Arrows -->
                     <path d="M 180 60 L 250 60" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
@@ -320,10 +327,10 @@
 
             <h3>Technology Stack</h3>
             <ul>
-                <li><strong>Knowledge Graphs:</strong> Neo4j hosting Hetionet and Qiagen IPA databases with semantic embedding layer</li>
+                <li><strong>Knowledge Graphs:</strong> Neo4j hosting Hetionet and Qiagen databases with semantic embedding layer</li>
                 <li><strong>Agent Orchestration:</strong> LangGraph StateGraph for managing tool selection and retrieval workflows</li>
-                <li><strong>Large Language Models:</strong> GPT-4 for complex reasoning and synthesis, Mistral Large for simpler classification and extraction tasks</li>
-                <li><strong>Embeddings:</strong> Multiple biomedical embedding models evaluated through LLM-as-judge pipeline (PubMedBERT, BioBERT, BioLinkBERT, SciBERT, BiolinicalBERT, and others)</li>
+                <li><strong>Large Language Models:</strong> GPT-4 for complex reasoning and synthesis, Llama 3.1-8B for simpler classification and extraction tasks</li>
+                <li><strong>Embeddings:</strong> Multiple biomedical embedding models evaluated through LLM-as-judge pipeline (Snowflake-Arctic, PubMedBERT, BioBERT, BioLinkBERT, SciBERT, BiolinicalBERT, and others)</li>
                 <li><strong>Backend Platform:</strong> Dataiku with custom Python libraries for data processing and tool integration</li>
                 <li><strong>Query Language:</strong> Cypher for graph traversal, with text-to-Cypher translation layer</li>
                 <li><strong>Frontend:</strong> OpenAI chatbot interface for natural language interaction</li>
